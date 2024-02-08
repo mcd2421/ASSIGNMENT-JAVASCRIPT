@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TUGAS JAVASCRIPT</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #loginContainer, #todoApp {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+
+        #taskInput {
+            margin-bottom: 10px;
+            padding: 8px;
+            width: 60%;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 8px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 4px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #3498db;
+        }
+
+        a:hover {
+            color: #217dbb;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Login Form -->
+    <div id="loginContainer">
+        <h1>Login</h1>
+        <label for="username">Username:</label>
+        <input type="text" id="username" placeholder="Enter your username">
+        <button onclick="loginUser()">Login</button>
+    </div>
+
+    <!-- Todo List App -->
+    <div id="todoApp" style="display: none;">
+        <h1>APLIKASI TO DO LIST </h1>
+        <p>Welcome, <span id="loggedInUser"></span>! (<a href="#" onclick="logoutUser()">Logout</a>)</p>
+        <input type="text" id="taskInput" placeholder="Add a task">
+        <button onclick="addTask()">Add Task</button>
+
+        <ul id="taskList"></ul>
+        <p>Total tasks: <span id="taskCount">0</span></p>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
